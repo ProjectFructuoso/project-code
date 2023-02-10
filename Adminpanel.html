@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Admin Panel</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!------Calender------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+    
+      <!------Custom Css------>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    
+<div class="wrapper">
+    <nav class="navbar navbar-invento navbar-expand-md navbar-light bg-light py-1">
+        <div class="container-fluid">
+            <button class="btn btn-default" id="btn-slider" type="button">
+                <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+            </button>
+            <ul class="nav ml-auto">
+                <li class="nav-item dropleft mr-lg-4">
+                    <a class="nav-link text-dark ps-3" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown">
+                        <i class="fa fa-bell fa-lg py-2" aria-hidden="true"></i>
+                        <span class="badge bg-danger text-white">10</span>
+                    </a>
+
+                    <div class="dropdown-menu mt-2 pt-0" aria-labelledby="navbarDropdown">
+                        <div class="d-flex p-3 border-bottom align-items-cente mb-2">
+                            <i class="fa fa-bell fa-2x mr-3" aria-hidden="true"></i>
+                            <span class="fw-bold lh-1">Notifikasi</span>
+                        </div>
+                        <a class="dropdown-item py-2" href="#">
+                            <div class="d-flex overflow-hidden">
+                                <i class="fa fa-envelope fa-2x dropdown-icons bg-primary text-white p-2 mr-2"
+                                    aria-hidden="true"></i>
+                                <div class="d-block content">
+                                    <p class="lh-1 mb-0">Safna Prasetiono</p>
+                                    <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Quia sint laboriosam in architecto earum.</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item py-2" href="#">
+                            <div class="d-flex overflow-hidden">
+                                <i class="fa fa-file fa-2x dropdown-icons bg-warning text-white p-2 mr-2"
+                                    aria-hidden="true"></i>
+                                <div class="d-block content">
+                                    <p class="lh-1 mb-0">file informations</p>
+                                    <span class="content-text">your file has exceeded the limit.</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item navbar-brand me-auto text-danger" href="#">Dash<span class="text-warning">Board</span></a>
+            
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+    <div class="slider slider2" id="sliders">
+        <div class="slider-head text-center">
+            <div class="d-block pt-4 pb-3 px-3">
+                <img src="assets/img//user/Admin-Profile-PNG-Clipart.png" alt="user" class="slider-img-user mb-2">
+                <p class="fw-bold mb-0 lh-1 text-white">YourName</p>
+                <a class="navbar-brand me-auto text-danger" href="#">Admin<span class="text-warning">Panel</span></a>
+            </div>
+        </div>
+
+        <div class="slider-body px-1">
+            <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+
+
+                <li class="nav-item">
+                  <a class="nav-link px-3 active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-home fa-lg box-icon"></i> Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link px-3" id="registration-tab" data-toggle="tab" href="#registration" role="tab" aria-controls="registration" aria-selected="false"><i class="fa fa-user fa-lg box-icon"></i> Registered</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                  <a class="nav-link px-3" id="appointment-tab" data-toggle="tab" href="#appointment" role="tab" aria-controls="appointment" aria-selected="false"><i class="fa-solid fa-calendar-days fa-lg box-icon" aria-hidden="true"></i>Appointment</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link px-3" id="passport-renewal-tab" data-toggle="tab" href="#passport-renewal" role="tab" aria-controls="passport-renewal" aria-selected="false"> <i class="fa-solid fa-passport fa-lg box-icon" aria-hidden="true"></i>Passport Renewal</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                    <a class="nav-link px-3" id="consular-card-tab" data-toggle="tab" href="#consular-card" role="tab" aria-controls="consular-card" aria-selected="false"> <i class="fa fa-id-card fa-lg box-icon" aria-hidden="true"></i>Consular Card</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link px-3" id="consultation-tab" data-toggle="tab" href="#consultation" role="tab" aria-controls="consultation" aria-selected="false"><i class="fa fa-commenting fa-lg box-icon" aria-hidden="true"></i>Massage</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                    <a class="nav-link px-3" href=""><i class="fa-solid fa-gear fa-lg box-icon" aria-hidden="true"></i>Super User</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link px-3" href="index.html"><i class="fa-solid fa-right-to-bracket fa-lg box-icon"  aria-hidden="true"></i>LogOut</a>
+                  </li>
+
+
+
+              </ul>
+        </div>
+    </div>
+
+
+    <div class="main-pages">
+        <div class="container-fluid">
+           <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="row g-2 mb-3">
+                        <div class="col-12">
+                            <div class="d-block bg-white rounded shadow p-3">
+                                <p>The administrator is in responsible of controlling all application operations, including replying to applications, sending users the necessary information, maintaining user accounts, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="row g-3">
+                              <div class="col-12 col-sm-6 col-md-6 col-lg-3 py-2">
+                                <div class="card p-2 shadow card-content">
+                                    <div class="d-flex align-items-center px-2">
+                                      <i class="fa-solid fa-person-walking-luggage fa-3x py-auto" aria-hidden="true"></i>
+                                        <div class="card-body text-right">
+                                            <h5 class="card-title font-weight-bold">122</h5>
+                                            <p class="card-text font-weight-bold">tourist visit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 py-2">
+                                <div class="card p-2 shadow card-content">
+                                    <div class="d-flex align-items-center px-2">
+                                      <i class="fa-solid fa-church fa-3x py-auto" aria-hidden="true"></i>
+                                        <div class="card-body text-right">
+                                            <h5 class="card-title font-weight-bold">123</h5>
+                                            <p class="card-text font-weight-bold">Religious visit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 py-2">
+                                <div class="card p-2 shadow card-content">
+                                    <div class="d-flex align-items-center px-2">
+                                      <i class="fa fa-users float-right fa-3x py-auto" aria-hidden="true"></i>
+                                        <div class="card-body text-right">
+                                            <h5 class="card-title font-weight-bold">122</h5>
+                                            <p class="card-text font-weight-bold">Family Visit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 py-2">
+                                <div class="card p-2 shadow card-content">
+                                    <div class="d-flex align-items-center px-2">
+                                        <i class="fa-solid fa-graduation-cap fa-3x py-auto" aria-hidden="true"></i>
+                                        <div class="card-body text-right">
+                                            <h5 class="card-title font-weight-bold">122</h5>
+                                            <p class="card-text font-weight-bold">Students</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 g-3 mt-3">
+                                  <div class="d-block bg-white shadow p-4">
+                                      <div id='calendar'></div>
+                                  </div>
+                              </div>
+                        </div>
+             
+                    </div>
+
+
+                    <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
+
+                        <section class="tables-page-section">
+                             <div class="row">
+                              <div class="col-md-12">
+                               <div class="section_title text-center">
+                                 <h3>Registration table</h3>
+                                  <div class="brand_border mb-4">
+                                   <i class="fa fa-minus" aria-hidden="true"></i> 
+                                   <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                                   <i class="fa fa-minus" aria-hidden="true"></i>
+                                  </div>
+                                  <div>
+                                    <form action="">
+                                        <div class="p-0 bg-light rounded-pill shadow-sm">
+                                            <div class="input-group">
+                                              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light rounded-pill">
+                                              <div class="input-group-append">
+                                                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                           <div class="row mt-4">
+                            <div class="col-md-12">
+                              <h6 class="">Student</h6>
+                              <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <th>#</th>
+                                      <th>F.Name</th>
+                                      <th>L.Name</th>
+                                      <th>Dob</th>
+                                      <th>Status</th>
+                                      <th>Gender</th>
+                                      <th>Number</th>
+                                      <th>Detail</th>
+                                    </thead>
+                                    <tr>
+                                      <th>1</th>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td><a href="#">See more</a></td>
+                                    </tr>
+                                    <tr>
+                                  </table>
+                                </div>
+
+                                <h6 class="">Family Visit</h6>
+                              <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <th>#</th>
+                                      <th>F.Name</th>
+                                      <th>L.Name</th>
+                                      <th>Dob</th>
+                                      <th>Status</th>
+                                      <th>Gender</th>
+                                      <th>Number</th>
+                                      <th>Detail</th>
+                                    </thead>
+                                    <tr>
+                                      <th>1</th>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td><a href="#">See more</a></td>
+                                    </tr>
+                                    <tr>
+                                  </table>
+                                </div>
+
+
+                                <h6 class="">Religious Visit</h6>
+                              <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <th>#</th>
+                                      <th>F.Name</th>
+                                      <th>L.Name</th>
+                                      <th>Dob</th>
+                                      <th>Status</th>
+                                      <th>Gender</th>
+                                      <th>Number</th>
+                                      <th>Detail</th>
+                                    </thead>
+                                    <tr>
+                                      <th>1</th>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td>Table Cell</td>
+                                      <td><a href="#">See more</a></td>
+                                    </tr>
+                                    <tr>
+                                  </table>
+                                </div>
+
+
+                                <h6 class="">Tourist Visit</h6>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                      <thead>
+                                        <th>#</th>
+                                        <th>F.Name</th>
+                                        <th>L.Name</th>
+                                        <th>Dob</th>
+                                        <th>Status</th>
+                                        <th>Gender</th>
+                                        <th>Number</th>
+                                        <th>Detail</th>
+                                      </thead>
+                                      <tr>
+                                        <th>1</th>
+                                        <td>Table Cell</td>
+                                        <td>Table Cell</td>
+                                        <td>Table Cell</td>
+                                        <td>Table Cell</td>
+                                        <td>Table Cell</td>
+                                        <td>Table Cell</td>
+                                        <td><a href="#">See more</a></td>
+                                      </tr>
+                                      <tr>
+                                    </table>
+                                  </div>
+
+
+
+                            </div>
+                          </div>
+                         </section>
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="appointment" role="tabpanel" aria-labelledby="appointment-tab">
+
+                      <section class="tables-page-section">
+                            <div class="section_title text-center">
+                                <h3>Appointment Management</h3>
+                                 <div class="brand_border mb-4">
+                                  <i class="fa fa-minus" aria-hidden="true"></i> 
+                                  <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                                  <i class="fa fa-minus" aria-hidden="true"></i>
+                                 </div>
+                                 <div>
+                                   <form action="">
+                                       <div class="p-0 bg-light rounded-pill shadow-sm">
+                                           <div class="input-group">
+                                             <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light rounded-pill">
+                                             <div class="input-group-append">
+                                               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                             </div>
+                                           </div>
+                                         </div>
+                                   </form>
+                                 </div>
+                            </div>
+                            <div class="row g-3 mt-4">
+                              <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                                    <div class="card p-4 apointment-acenpt shadow">
+                                        <div class="fecha">
+                                            <h6>First name:  <span>Fructuoso Nguema</span></h6>
+                                            <h6>Last name:  <span>Abeso Ngui</span></h6>
+                                             <p>Email:  <span>fructugu@gmail.com</span></p>
+                                             <p>Phone num:  <span>7800633429</span></p> 
+                                             <p>Date & time:  <span>7800633429</span></p> 
+                                             <h6>Director: <span>Fructuoso Nguema</span></h6>
+                                             <p class="py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                        <div>
+                                            <form>
+                                                <!-- Date Picker -->
+                                                <div class="form-group">
+                                                  <div class="datepicker date input-group">
+                                                    <input type="text" placeholder="mm/dd/yyyy" class="form-control" id="fecha1">
+                                                    <div class="input-group-append">
+                                                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                              <a href="#" class="btn text-light main-bg min-bg col-sm-12 col-md-112 col-lg-12 col-xl-12">Aceptar</a>
+                                        </div>
+                                    </div>
+                              </div>
+                            </div>
+                    </section>
+                        
+                    </div>
+
+                    
+                    <div class="tab-pane fade" id="passport-renewal" role="tabpanel" aria-labelledby="passport-renewal-tab">
+
+                      <section class="tables-page-section">
+                            <div class="section_title text-center">
+                                <h3>Passport Management</h3>
+                                 <div class="brand_border mb-4">
+                                  <i class="fa fa-minus" aria-hidden="true"></i> 
+                                  <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                                  <i class="fa fa-minus" aria-hidden="true"></i>
+                                 </div>
+                                 <div>
+                                   <form action="">
+                                       <div class="p-0 bg-light rounded rounded-pill shadow-sm">
+                                           <div class="input-group">
+                                             <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light rounded-pill">
+                                             <div class="input-group-append">
+                                               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                             </div>
+                                           </div>
+                                         </div>
+                                   </form>
+                                 </div>
+                               </div>
+
+                            <div class="row g-3 mt-3">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 py-3">
+                                    <div class="card p-4 apointment-acenpt shadow">
+                                        <div class="">
+                                          
+                                            <h6>First name:  <span>Fructuoso Nguema</span></h6>
+                                            <h6>Last name:  <span>Abeso Ngui</span></h6>
+                                            <p>Passport num:  <span>635363829</span></p>
+                                             <p>Aplicant birthday:  <span>2/33/230</span></p>
+                                             <p>Email:  <span>fructugu@gmail.com</span></p>
+                                             <p>Phone num:  <span>7800633429</span></p>  
+                                        </div>
+                                        <div>
+                                            <form>
+                                                <!-- Date Picker -->
+                                                <div class="form-group mb-4">
+                                                  <div class="datepicker date input-group">
+                                                    <input type="text" placeholder="mm/dd/yyyy" class="form-control" id="fecha1">
+                                                    <div class="input-group-append">
+                                                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                              <a href="#" class="btn text-light main-bg min-bg col-sm-12 col-md-112 col-lg-12 col-xl-12">Aceptar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                      </section>
+
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="consular-card" role="tabpanel" aria-labelledby="consular-card-tab">
+
+                      <section class="tables-page-section">
+                            <div class="section_title text-center">
+                                <h2>Consular Card Management</h2>
+                                 <div class="brand_border mb-4">
+                                  <i class="fa fa-minus" aria-hidden="true"></i> 
+                                  <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                                  <i class="fa fa-minus" aria-hidden="true"></i>
+                                 </div>
+                                 <div>
+                                   <form action="">
+                                       <div class="p-0 bg-light rounded-pill shadow-sm">
+                                           <div class="input-group">
+                                             <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light rounded-pill">
+                                             <div class="input-group-append">
+                                               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                             </div>
+                                           </div>
+                                         </div>
+                                   </form>
+                                 </div>
+                               </div>
+
+                            <div class="row g-3 mt-3">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="card p-4 apointment-acenpt shadow">
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                            <h6>Fname:  <span>Fructuoso Nguema</span></h6>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <h6>Lname:  <span>Abeso Ngui</span></h6>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <p>Father:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <p>Mother:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <p>Province:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-md-6">
+                                              <p>Distrit:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-md-6">
+                                              <p>Place of birth:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <p>Date birthday:  <span>2/33/230</span></p>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-md-6">
+                                              <p>Profesion:  <span>635363829</span></p>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                              <p>Gender:  <span>635363829</span></p>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                              <p>Status:  <span>635363829</span></p>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                              <p>work or school:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <p>Address:  <span>635363829</span></p>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                              <p>Phone num:  <span>7800633429</span></p> 
+                                            </div>
+                                    </div>
+                                        <div>
+                                            <form>
+                                                <!-- Date Picker -->
+                                                <div class="form-group">
+                                                  <div class="datepicker date input-group">
+                                                    <input type="text" placeholder="mm/dd/yyyy" class="form-control" id="fecha1">
+                                                    <div class="input-group-append">
+                                                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                              <a href="#" class="btn text-light main-bg min-bg col-sm-12 col-md-112 col-lg-12 col-xl-12">Aceptar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      </section>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="consultation" role="tabpanel" aria-labelledby="consultation-tab">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card shadow p-4">
+                                        <h2 class="p-3 mb-3 text-center border-bottom">Important Information</h2>
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control contol-input" id="name" placeholder="First name">
+                                                   </div>
+                                                </div>
+        
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control contol-input" id="name" placeholder="Last name">
+                                                   </div>
+                                                </div>
+        
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control contol-input" id="name" placeholder="Email">
+                                                   </div>
+                                                </div>
+        
+                                                <div class="col-md-12">
+                                                   <div class="form-group">
+                                                    <textarea name="" placeholder="This is looking great and nice." class="form-control contol-input" id=""  rows="4"></textarea>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                            <div class="d-grid justify-content-center">
+                                                <button type="submit" class="btn text-light main-bg col-sm-12 col-md-112 col-lg-12 col-xl-12" >Send Message</button>
+                                              </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+        
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="slider-background" id="sliders-background"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+       <!-----------js------>
+
+       <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.js"></script>
+       <script>
+ 
+       document.addEventListener('DOMContentLoaded', function() {
+         var calendarEl = document.getElementById('calendar');
+         var calendar = new FullCalendar.Calendar(calendarEl, {
+           initialView: 'dayGridMonth'
+         });
+         calendar.render();
+       });
+ 
+     </script>
+
+     <script>
+        $(function () {
+            $('.datepicker').datepicker({
+              language: "es",
+              autoclose: true,
+              format: "dd/mm/yyyy"
+            });
+          });
+          
+     </script>
+     
+  </body>
+</html>

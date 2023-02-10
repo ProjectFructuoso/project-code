@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Consular Services</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+     <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!------Calender------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.css">
+    
+    <!------Custom Css------>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    
+    <div class="wrapper">
+      <nav class="navbar navbar-invento navbar-expand-md navbar-light bg-light py-1">
+        <div class="container-fluid">
+            <button class="btn btn-default" id="btn-slider" type="button">
+                <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+            </button>
+            <a class="navbar-brand mx-auto text-danger" href="#">Consular<span class="text-warning">Services</span></a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item dropleft">
+                    <a class="nav-link text-dark ps-3 pe-1" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown">
+                        <img src="./assets/img/user/user.png" alt="user" class="img-user">
+                    </a>
+                    <div class="dropdown-menu mt-2 pt-0" aria-labelledby="navbarDropdown">
+                        <div class="d-flex p-3 border-bottom mb-2">
+                            <img src="./assets/img/user/user.png" alt="user" class="img-user mr-2">
+                            <div class="d-block">
+                                <p class="fw-bold m-0 lh-1">YourName</p>
+                                <small>YourAccount@gmail.com</small>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-user fa-lg mr-3" aria-hidden="true"></i>Profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-cog fa-lg mr-3" aria-hidden="true"></i>Setting
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-right-to-bracket fa-lg mr-2"  aria-hidden="true"></i>LogOut
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="slider" id="sliders">
+        <div class="slider-head text-center">
+            <div class="d-block pt-4 pb-3 px-3">
+                <img src="assets/img/user/user.png" alt="user" class="slider-img-user mb-2">
+                <p class="fw-bold mb-0 lh-1 text-white">YourName</p>
+                <small class="text-white">YourAccount@gmail.com</small>
+            </div>
+        </div>
+
+        <div class="slider-body px-1">
+            <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+
+
+                <li class="nav-item">
+                  <a class="nav-link px-3 active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-home fa-lg box-icon"></i> Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link px-3" id="registration-tab" data-toggle="tab" href="#registration" role="tab" aria-controls="registration" aria-selected="false"><i class="fa fa-user fa-lg box-icon"></i> Registration</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                  <a class="nav-link px-3" id="appointment-tab" data-toggle="tab" href="#appointment" role="tab" aria-controls="appointment" aria-selected="false"><i class="fa-solid fa-calendar-days fa-lg box-icon" aria-hidden="true"></i>Appointment</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link px-3" id="passport-renewal-tab" data-toggle="tab" href="#passport-renewal" role="tab" aria-controls="passport-renewal" aria-selected="false"> <i class="fa-solid fa-passport fa-lg box-icon" aria-hidden="true"></i>Passport Renewal</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                    <a class="nav-link px-3" id="consular-card-tab" data-toggle="tab" href="#consular-card" role="tab" aria-controls="consular-card" aria-selected="false"> <i class="fa fa-id-card fa-lg box-icon" aria-hidden="true"></i>Consular Card</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link px-3" id="nationality-certificate-tab" data-toggle="tab" href="#nationality-certificate" role="tab" aria-controls="nationality-certificate" aria-selected="false"> <i class="fa fa-credit-card-alt fa-lg box-icon" aria-hidden="true"></i>Nationality Certificate</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                    <a class="nav-link px-3" id="affidavit-tab" data-toggle="tab" href="#affidavit" role="tab" aria-controls="affidavit" aria-selected="false"> <i class="fa fa-briefcase fa-lg box-icon" aria-hidden="true"></i>Affidavit</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link px-3" id="marriage-and-celibacy-tab" data-toggle="tab" href="#marriage-and-celibacy" role="tab" aria-controls="marriage-and-celibacy" aria-selected="false"> <i class="fa fa-venus-mars fa-lg box-icon" aria-hidden="true"></i>Marriage and  Celibacy</a>
+                  </li>
+                 
+
+                  <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                    <a class="nav-link px-3" id="visas-tab" data-toggle="tab" href="#visas" role="tab" aria-controls="visas" aria-selected="false"> <i class="fa-brands fa-cc-visa fa-lg box-icon" aria-hidden="true"></i>visas</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link px-3" id="consultation-tab" data-toggle="tab" href="#consultation" role="tab" aria-controls="consultation" aria-selected="false"><i class="fa fa-commenting fa-lg box-icon" aria-hidden="true"></i>Consultation</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <hr class="soft my-1 bg-white">
+                    <a class="nav-link px-3" href="./Adminpanel.html" ><i class="fa-solid fa-right-to-bracket fa-lg box-icon"  aria-hidden="true"></i>LogOut</a>
+                  </li>
+
+
+
+              </ul>
+        </div>
+    </div>
+
+
+    <div class="main-pages">
+        <div class="container-fluid">
+           <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                        <div class="col-12 g-2 mb-3">
+                            <div class="d-block bg-white shadow p-4">
+                                <p>Consular assistance is help and advice provided by the diplomatic agents of a country to citizens of that country who are living or traveling overseas.The diplomats may be honorary consuls, or members of the country's diplomatic service.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 g-2">
+                            <div class="d-block bg-white shadow p-4">
+                                <div id='calendar'></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="p-3 mb-3 text-center border-bottom">Embassy Registration</h3>
+
+                                <form action="">
+                                    <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="First name">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Last name">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Father's name">
+                                               </div>
+                                            </div>
+
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Mother's name">
+                                               </div>
+                                            </div>
+
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="required" class="form-control form-control-chosen-required box-input">
+                                                        <option value="" disabled selected hidden class="Marital-Status">Provincia</option>
+                                                        <option class="item">Annobón</option>
+                                                        <option>Wele-Nzas</option>
+                                                        <option>Kie-Ntem</option>
+                                                        <option>Centro Sur</option>
+                                                        <option>Litoral</option>
+                                                        <option>Bioko Sur</option>
+                                                        <option>Bioko Norte</option>
+                                                      </select>
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="required" class="form-control form-control-chosen-required box-input">
+                                                        <option value="" disabled selected hidden class="Marital-Status">Distrito</option>
+                                                        <option>Malabo</option>
+                                                        <option>Bata</option>
+                                                        <option>Ebebiyín</option>
+                                                        <option>Aconibe</option>
+                                                        <option>Evinayong</option>
+                                                        <option>Mongomo</option>
+                                                        <option>San Antonio de Palé</option>
+                                                        <option>Luba</option>
+                                                        <option>Micomeseng</option>
+                                                        <option>Mengomeyén</option>
+                                                        <option>Mbini</option>
+                                                        <option>Acurenam</option>
+                                                      </select>
+                                               </div>
+                                            </div>
+
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Place of birth">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Dade of birth">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Profession">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="required" class="form-control form-control-chosen-required box-input">
+                                                        <option value="" disabled selected hidden class="Marital-Status">Gender</option>
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                      </select>
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="parent's number">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Your number">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control contol-input" id="name" placeholder="Other number">
+                                               </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="required" class="form-control form-control-chosen-required box-input">
+                                                        <option value="" disabled selected hidden class="Marital-Status">Marital Status</option>
+                                                        <option>Single</option>
+                                                        <option>Marrige</option>
+                                                      </select>
+                                               </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="d-grid justify-content-center">
+                                            <a href="#" class="btn text-light main-bg col-sm-12 col-md-112 col-lg-12 col-xl-12">Register</a>
+                                          </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="appointment" role="tabpanel" aria-labelledby="appointment-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="p-3 mb-3 text-center border-bottom">Book Appointment</h3>
+
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Full Name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Director name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control contol-input" id="name" placeholder="Email">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Phone number">
+                                           </div>
+                                        </div>
+
+
+
+                                        <div class="col-md-12">
+                                           <div class="form-group">
+                                            <textarea name="" placeholder="Reason for booking an appointment" class="form-control contol-input" id=""  rows="4"></textarea>
+                                           </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="d-grid justify-content-center">
+                                        <a href="#" class="btn text-light main-bg col-sm-12 col-md-112 col-lg-12 col-xl-12" >Register</a>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="passport-renewal" role="tabpanel" aria-labelledby="passport-renewal-tab">
+                <div class="row">
+                        <div class="col-12 g-2 mb-3">
+                            <div class="d-block bg-white shadow p-4">
+                                <h3>Passport Renewal</h3>
+                                <p>applicants must follow the following procedures. download and fill out the following <a href="./assets//img/user/Renovacion_Pasaporte.pdf" download>document</a>, fill in the form below, and finally wait for the response from the embassy.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 g-2">
+                            <div class="d-block bg-white shadow p-4">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Applicant's Name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Applicant's Surname">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Applicant's Passport Number">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Applicant's Date of Birth">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control contol-input" id="name" placeholder="Email">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Mobile Number">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="File" class="form-control contol-input pb-5" id="name" placeholder="Passport picture">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="file" class="form-control contol-input pb-5" id="name" placeholder="Apload document">
+                                           </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="d-grid justify-content-center">
+                                        <a href="#" class="btn text-light main-bg col-sm-12 col-md-112 col-lg-12 col-xl-12" >Register</a>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="consular-card" role="tabpanel" aria-labelledby="consular-card-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="p-3 mb-3 text-center border-bottom">Consular Card</h3>
+
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="First name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Last name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Father's name">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control contol-input" id="name" placeholder="Mother's name">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="required" class="form-control form-control-chosen-required box-input">
+                                                    <option value="" disabled selected hidden class="Marital-Status">Provincia</option>
+                                                    <option class="item">Annobón</option>
+                                                    <option>Wele-Nzas</option>
+                                                    <option>Kie-Ntem</option>
+                                                    <option>Centro Sur</option>
+                                                    <option>Litoral</option>
+                                                    <option>Bioko Sur</option>
+                                                    <option>Bioko Norte</option>
+                                                  </select>
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select id="required" class="form-control form-control-chosen-required box-input">
+                                                        <option value="" disabled selected hidden class="Marital-Status">Distrito</option>
+                                                        <option>Malabo</option>
+                                                        <option>Bata</option>
+                                                        <option>Ebebiyín</option>
+                                                        <option>Aconibe</option>
+                                                        <option>Evinayong</option>
+                                                        <option>Mongomo</option>
+                                                        <option>San Antonio de Palé</option>
+                                                        <option>Luba</option>
+                                                        <option>Micomeseng</option>
+                                                        <option>Mengomeyén</option>
+                                                        <option>Mbini</option>
+                                                        <option>Acurenam</option>
+                                                      </select>
+                                               </div>
+                                            </div>
+
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Place of birth">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Profession">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="required" class="form-control form-control-chosen-required box-input">
+                                                    <option value="" disabled selected hidden class="Marital-Status">Gender</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                  </select>
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Dade of birth">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="required" class="form-control form-control-chosen-required box-input">
+                                                    <option value="" disabled selected hidden class="Marital-Status">Marital Status</option>
+                                                    <option>Single</option>
+                                                    <option>Marrige</option>
+                                                  </select>
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Work place or School">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Address">
+                                           </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Number">
+                                           </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid justify-content-center">
+                                        <a href="#" class="btn text-light main-bg col-sm-12 col-md-112 col-lg-12 col-xl-12" >Register</a>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="nationality-certificate" role="tabpanel" aria-labelledby="nationality-certificate-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="text-center">Nationality Certificate</h3>
+                                <p class="border-bottom text-center p-3 mb-3">Here you will find all the information you need to perform the procedure</p>
+                                <div class="nacionality-certificate">
+                                    <h4>How to proceed?</h4><br>
+                                   <p>  <span class="number-nationality">1.</span><a href="assets/img/user/Nationality.pdf" download>Download </a> and complete the certificate request document by checking the “nationality” option.</p>
+                                   <p>  <span class="number-nationality">2.</span>Attach to the file a color copy of your passport – only the page on which your information is indicated.</p>
+                                   <p>  <span class="number-nationality">3.</span>Send your <b>FULL</b> file to the Embassy’s email equatorialguineaembassy@gmail.com</p>
+                                   <p>  <span class="number-nationality">4.</span>The consular service will contact the applicant to offer a personal meeting and instructions to finalize the process.</p>
+                                   <h6 class="text-white"><a href="assets/img/user/Nationality.pdf" download><span><i class="fa fa-download" aria-hidden="true"></i></span> Download the certificate request document</a> <span></span></h6>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="affidavit" role="tabpanel" aria-labelledby="affidavit-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="text-center">Affidavit</h3>
+                                <p class="border-bottom text-center p-3 mb-3">Here you will find all the information you need to perform the procedure</p>
+                                <div class="nacionality-certificate">
+                                    <h4>How to proceed?</h4><br>
+                                   <p>  <span class="number-nationality">1.</span><a href="assets/img/user/AFFIDAVIT.pdf" download>Download </a> and complete the affidavit document.</p>
+                                   <p>  <span class="number-nationality">2.</span>If you live in Ghana, go to the Embassy with the duly completed document</p>
+                                   <p>  <span class="number-nationality">3.</span>The consular service will contact the applicant to offer a personal meeting and instructions to finalize the process.</p>
+                                   <h6 class="text-white"><a href="assets/img/user/AFFIDAVIT.pdf" download><span><i class="fa fa-download" aria-hidden="true"></i></span> Download the affidavit document</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+
+            
+            <div class="tab-pane fade" id="marriage-and-celibacy" role="tabpanel" aria-labelledby="marriage-and-celibacy-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="text-center">Marriage and Celibacy</h3>
+                                <p class="border-bottom text-center p-3 mb-3">Here you will find all the information you need to perform the procedure</p>
+                                <div class="nacionality-certificate">
+                                    <h3>How to proceed?</h3><br>
+                                    <h3>Marriage Certificate</h3><br>
+                                   <p>  <span class="number-nationality">1.</span>Request the “single status” document from the civil status register of your constituency in Equatorial Guinea.</p>
+                                   <p>  <span class="number-nationality">2.</span>Do not forget that the act of celibacy must be legalized both in the civil status register of your district and at the Ministry of Foreign Affairs.</p>
+                                   <p>  <span class="number-nationality">3.</span><a href="assets/img/user/Marriage.pdf" download>Download </a> and complete the certificate request document by checking the “single” option.</p>
+                                   <p>  <span class="number-nationality">4.</span>Attach to the file a color copy of your passport only the page on which your information is indicated.</p>
+                                   <p>  <span class="number-nationality">5.</span>Send your <b>FULL</b> file to the Embassy’s email equatorialguineaembassy@gmail.com.</p>
+                                   <p>  <span class="number-nationality">6.</span>The consular service will contact the applicant to offer a personal meeting and instructions to finalize the process.</p><br>
+
+                                    <h4>Certificate of celibacy</h4><br>
+                                   <p>  <span class="number-nationality">1.</span>Request the document justifying your marriage in Equatorial Guinea from the corresponding ministry or administration.</p>
+                                   <p>  <span class="number-nationality">2.</span>Do not forget that the act of celibacy must be legalized both in the civil status register of your district and at the Ministry of Foreign Affairs.</p>
+                                   <p>  <span class="number-nationality">3.</span><a href="assets/img/user/Marriage.pdf" download>Download </a> and complete the certificate request document by checking the “single” option.</p>
+                                   <p>  <span class="number-nationality">4.</span>Attach to the file a color copy of your passport only the page on which your information is indicated.</p>
+                                   <p>  <span class="number-nationality">5.</span>Send your <b>FULL</b> file to the Embassy’s email equatorialguineaembassy@gmail.com.</p>
+                                   <p>  <span class="number-nationality">6.</span>The consular service will contact the applicant to offer a personal meeting and instructions to finalize the process.</p>
+                                   <h6 class="text-white"><a href="assets/img/user/AFFIDAVIT.pdf" download><span><i class="fa fa-download" aria-hidden="true"></i></span> Download the certificate request document</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
+
+
+             
+            <div class="tab-pane fade" id="visas" role="tabpanel" aria-labelledby="visas-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="text-center">visas</h3>
+                                <p class="border-bottom text-center p-3 mb-3">Here you will find all the information you need to perform the procedure</p>
+                                <div class="nacionality-certificate">
+                                    <h3>How does the procedure take place?</h3><br>
+                                    <h3>Visas</h3><br>
+
+                                   
+                                   <p>  <span class="number-nationality">1.</span>Check if you meet the conditions.</p>
+                                   <p>  <span class="number-nationality">2.</span><a href="./assets/img/user/Solicitud_Visado.pdf" download>Download </a> and complete the visa application document</p>
+                                   <p>  <span class="number-nationality">3.</span>Attach to the file a color copy of your passport only the page on which your information is indicated.</p>
+                                   <p>  <span class="number-nationality">4.</span>Send your <b>FULL</b> file to the Embassy’s email equatorialguineaembassy@gmail.com.</p>
+                                   <p>  <span class="number-nationality">5.</span>The consular service will contact the applicant to notify him of the resolution of his file.</p><br>
+
+                                    <h3>Terms</h3><br>
+
+                                    <div>
+                                        <div class="d-flex justify-content-between w-100">
+                                            <div class="number-nationality">
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                            </div>
+    
+                                            <div>
+                                                <p class="px-2">The Embassy of Equatorial Guinea to the Republic of Ghana grants the following types of visas: business, tourism, family visit, transit and religious.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+                                            <div class="number-nationality">
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                            </div>
+    
+                                            <div>
+                                                <p class="px-2">Applications must be sent on Monday and Wednesday from 10:00 a.m. to 12:30 p.m., and visa pick-up will be done on Tuesday and Friday from 2:00 p.m. to 3:45 p.m.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="number-nationality">
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                            </div>
+    
+                                            <div>
+                                                <p class="px-2">The passport presented must be valid for at least 6 months, from the date of completion of the trip.</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="d-flex justify-content-between">
+                                            <div class="number-nationality">
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                            </div>
+    
+                                            <div>
+                                                <p class="px-2">Your file must include:
+
+                                                    <ul>
+                                                        <ol>
+                                                            <div class="d-flex justify-content-between">
+                                                                <div class="number-nationality">
+                                                                    <span class="">1.</span>
+                                                                </div>
+                        
+                                                                <div>
+                                                                    <p class="px-2">Two copies of the visa application document, duly completed and signed by the applicant. An unsigned and / or incomplete form will be rejected.</p>
+                                                                </div>
+                                                            </div>
+                                                        </ol>
+
+
+                                                        <ol>
+                                                            <div class="d-flex">
+                                                                <div class="number-nationality">
+                                                                    <span class="">2.</span>
+                                                                </div>
+                        
+                                                                <div>
+                                                                    <p class="px-2">Two recent passport-size photographs of the applicant in color.</p>
+                                                                </div>
+                                                            </div>
+                                                        </ol>
+
+                                                        <ol>
+                                                            <div class="d-flex">
+                                                                <div class="number-nationality">
+                                                                    <span class="">3.</span>
+                                                                </div>
+                        
+                                                                <div>
+                                                                    <p class="px-2">Certificate of good life and good morals sent by the police or the municipality (in English, French or Spanish), valid for 3 months after the date of issue.</p>
+                                                                </div>
+                                                            </div>
+                                                        </ol>
+
+
+                                                        <ol>
+                                                            <div class="d-flex">
+                                                                <div class="number-nationality">
+                                                                    <span class="">4.</span>
+                                                                </div>
+                        
+                                                                <div>
+                                                                    <p class="px-2">Return plane ticket.</p>
+                                                                </div>
+                                                            </div>
+                                                        </ol>
+
+
+                                                        <ol>
+                                                            <div class="d-flex">
+                                                                <div class="number-nationality">
+                                                                    <span class="">5.</span>
+                                                                </div>
+                        
+                                                                <div>
+                                                                    <p class="px-2">Vaccination file containing the vaccine against yellow fever.</p>
+                                                                </div>
+                                                            </div>
+                                                        </ol>
+
+
+
+                                                        <ol>
+                                                            <div class="d-flex">
+                                                                <div class="number-nationality">
+                                                                    <span class="">6.</span>
+                                                                </div>
+                        
+                                                                <div>
+                                                                    <p class="px-2">Letter of invitation legalized by the authorities of the emigration service of Equatorial Guinea. This letter must contain the applicant’s name and passport number and be valid for 3 months from the date of shipment.</p>
+                                                                </div>
+                                                            </div>
+                                                        </ol>
+
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                <div>
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class="number-nationality">
+                                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div>
+                                            <p class="px-2">The processing of visa applications generally takes two days. Applicants are responsible for depositing and collecting their passports at the Embassy.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex">
+                                        <div class="number-nationality">
+                                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div>
+                                            <p class="px-2">Incomplete applications will be categorically rejected.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex">
+                                        <div class="number-nationality">
+                                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div>
+                                            <p class="px-2">In case of refusal of your visa application, the file will remain at the embassy. Only the passport will be withdrawn.</p>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="d-flex">
+                                        <div class="number-nationality">
+                                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div>
+                                            <p class="px-2">The Embassy reserves the right to request additional documents from candidates (if necessary), as well as personal interviews.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex">
+                                        <div class="number-nationality">
+                                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div>
+                                            <p class="px-2">The Embassy declines all responsibility in the event of possible loss of the passport.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between">
+                                        <div class="number-nationality">
+                                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                                        </div>
+
+                                        <div>
+                                            <p class="px-2">Once the above documents have been compiled, applicants should submit the following additional documents, depending on the visa type: submit the following visa application:
+
+                                                <ul>
+                                                    <ol>
+                                                        <p>  <span class="number-nationality">1.</span>Business
+                                                            <ul>
+                                                                <ol>
+                                                                    <p>Invitation from the company receiving you in Equatorial Guinea, with a detailed explanation of the reasons for your trip.</p>
+                                                                </ol>
+                                                            </ul>
+                                                        </p>
+                                                    </ol>
+            
+                                                    <ol>
+                                                        <p>  <span class="number-nationality">2.</span>Tourism
+                                                        <ul>
+                                                            <ol>
+                                                                <p>Letter from your bank confirming that you have a minimum of 2,000 euros in your account.
+                                                                    Hotel reservation.</p>
+                                                            </ol>
+                                                        </ul>
+                                                        </p>
+                                                    </ol>
+            
+                                                    <ol>
+                                                        <p>  <span class="number-nationality">3.</span>Family visit
+                                                        <ul>
+                                                            <ol>
+                                                                <p>Invitation of your family to Equatorial Guinea</p>
+                                                            </ol>
+                                                        </ul>
+                                                        </p>
+                                                    </ol>
+            
+                                                    <ol>
+                                                        <p>  <span class="number-nationality">4.</span>Religious
+                                                        <ul>
+                                                            <ol>
+                                                                <p>Invitation of your contact in Equatorial Guinea.
+                                                                    Authorization from the Ministry of Justice, Worship and Penitentiary Establishments (in Malabo or Bata).</p>
+                                                            </ol>
+                                                        </ul>
+                                                        </p>
+                                                    </ol>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div> 
+                                <h6 class="text-white"><a href="assets/img/user/Solicitud_Visado.pdf" download><span><i class="fa fa-download" aria-hidden="true"></i></span> Download the certificate request document</a></h6>
+                                <h6 class="text-white"><a href="assets/img/user/Condiciones_Visado.pdf" download><span><i class="fa fa-download" aria-hidden="true"></i></span> Download the certificate request document</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="consultation" role="tabpanel" aria-labelledby="consultation-tab">
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow p-4">
+                                <h3 class="p-3 mb-3 text-center border-bottom">Consultation</h3>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="First name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control contol-input" id="name" placeholder="Last name">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control contol-input" id="name" placeholder="Email">
+                                           </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                           <div class="form-group">
+                                            <textarea name="" placeholder="This is looking great and nice." class="form-control contol-input" id=""  rows="4"></textarea>
+                                           </div>
+                                        </div>
+                                     </div>
+                                    <div class="d-grid justify-content-center">
+                                        <button type="submit" class="btn text-light main-bg col-sm-12 col-md-112 col-lg-12 col-xl-12" >Register</button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            </div>
+            </div>
+        </div>
+    </div>
+   
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="slider-background" id="sliders-background"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="assets/js/app.js"></script>
+
+       <!-----------js------>
+
+       <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.js"></script>
+       <script>
+ 
+       document.addEventListener('DOMContentLoaded', function() {
+         var calendarEl = document.getElementById('calendar');
+         var calendar = new FullCalendar.Calendar(calendarEl, {
+           initialView: 'dayGridMonth'
+         });
+         calendar.render();
+       });
+ 
+     </script>
+     
+  </body>
+</html>
